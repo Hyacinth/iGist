@@ -14,7 +14,7 @@
     [self refresh];
 }
 
-/*
+
 - (IBAction)openGithubAction:(id)sender{
     [self.gistView.gist openRepositoryURL];
 }
@@ -26,6 +26,6 @@
     }
     return YES;
 }
- */
+
 
 @end

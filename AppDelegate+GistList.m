@@ -46,7 +46,7 @@
 - (void)outlineViewSelectionDidChange:(NSNotification *)aNotification{
     if([aNotification name] == NSOutlineViewSelectionDidChangeNotification){
         Gist *gist = (Gist *)[self.listView itemAtRow:[self.listView selectedRow]];
-//        [self.gistView updateWithGist:gist];
+       [self.gistView updateWithGist:gist];
     }
 }
 

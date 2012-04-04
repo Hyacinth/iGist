@@ -35,6 +35,7 @@
     self = [super init];
     if(self != nil){
         [self setPropertiesFromDictionary:aDictionary];
+        [self cachedTextForFile:[self.files objectAtIndex:0]];
     }
     return self;
 }

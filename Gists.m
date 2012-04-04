@@ -22,9 +22,10 @@
     NSAutoreleasePool *pool =  [[NSAutoreleasePool alloc] init];
     for(NSDictionary *gist in [data objectForKey:@"gists"]){
         //TODO: fix the date
-        Gist *testgist = [[Gist alloc] initWithDictionary:gist];
-        NSLog(@"%@", testgist.created);
+        //Gist *testgist = [[Gist alloc] initWithDictionary:gist];
+        //NSLog(@"%@", testgist.created);
         [gists addObject:[[Gist alloc] initWithDictionary:gist]];
+        
     }
     [pool drain];
     

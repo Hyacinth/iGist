@@ -8,15 +8,31 @@
 
 #import "AppDelegate.h"
 #import "MGSFragaria.h"
+#import "Prefs.h"
+
 
 
 @implementation AppDelegate
 
-@synthesize window;
+@synthesize window, preferencesWindow;
 @synthesize listView;
-//@synthesize gistView;
+@synthesize gistView;
 @synthesize gists;
+@synthesize textView;
+@synthesize frageria;
 
+
++ (void)initialize{
+    if([self class] == [AppDelegate class]){
+        [Prefs registerUserDefaults];
+    }
+}
+
+- (void)prefsChanged:(NSNotification *)aNotification{
+    if([aNotification name] == NSUserDefaultsDidChangeNotification){
+        [self refresh];
+    }
+}
 
 #pragma mark -
 #pragma mark NSApplicationDelegate
@@ -63,18 +79,26 @@
 	[fragaria performSelector:@selector(setString:) withObject:fileText afterDelay:0];
 	
 	// access the NSTextView
-	NSTextView *textView = [fragaria objectForKey:ro_MGSFOTextView];
+	//NSTextView *textView = [fragaria objectForKey:ro_MGSFOTextView];
+	self.textView = [fragaria objectForKey:ro_MGSFOTextView];
     
     [self refresh];
 
-	
-#pragma unused(textView)
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(prefsChanged:)
+                                                 name:NSUserDefaultsDidChangeNotification 
+                                               object:nil];	
+//#pragma unused(textView)
 	
 }
 
+- (void)setTextViewWithString:(NSString *) string {
+    [fragaria performSelector:@selector(setString:) withObject:string afterDelay:0];
+}
+
+
 - (void)refresh{
-//    self.gists = [Gists gistsFromUser:GistPrefUserNameValue];
-    self.gists = [Gists gistsFromUser:@"mipmip"];
+    self.gists = [Gists gistsFromUser:GistPrefUserNameValue];
     [self.listView reloadData];
 }
 
@@ -90,6 +114,9 @@
 	 return YES;
  }
 
+- (IBAction)showPreferences:(id)sender{
+    [self.preferencesWindow makeKeyAndOrderFront:self];
+}
 
 #pragma mark -
 #pragma mark Pasteboard handling
@@ -110,6 +137,8 @@
 }
 
 
+
+
 #pragma mark -
 #pragma mark Syntax definition handling
 /*
@@ -117,7 +146,7 @@
  - setSyntaxDefinition:
  
  */
- 
+
 - (void)setSyntaxDefinition:(NSString *)name
 {
 	[fragaria setObject:name forKey:MGSFOSyntaxDefinitionName];

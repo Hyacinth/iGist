@@ -8,29 +8,34 @@
 
 #import <Cocoa/Cocoa.h>
 #import "GistManager.h"
-
+#import "GistView.h"
 
 @class SMLTextView;
 @class MGSFragaria;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+    NSWindow *window, *preferencesWindow;
 	IBOutlet NSView *editView;
 	MGSFragaria *fragaria;
 	BOOL isEdited;
-    
+    NSView *textView;
     NSOutlineView *listView;
-   // GistView *gistView;
+    GistView *gistView;
     NSArray *gists;
 }
 
 - (IBAction)copyToPasteBoard:(id)sender;
+- (void)refresh;
+- (void)setTextViewWithString:(NSString *) string;
 
-@property (assign) IBOutlet NSWindow *window;
+- (IBAction)showPreferences:(id)sender;
+
+@property (assign) IBOutlet NSWindow *window, *preferencesWindow;
 @property (assign) IBOutlet NSOutlineView *listView;
-//@property (assign) IBOutlet GistView *gistView;
+@property (assign) IBOutlet GistView *gistView;
 @property (nonatomic, retain) NSArray *gists;
-
+@property (assign) IBOutlet NSView *textView;
+@property (nonatomic, retain) MGSFragaria *frageria;
 
 - (void)setSyntaxDefinition:(NSString *)name;
 - (NSString *)syntaxDefinition;
@@ -38,7 +43,6 @@
 @end
 
 @interface AppDelegate(GistList)
-
 @end
 
 @interface AppDelegate(Actions)
