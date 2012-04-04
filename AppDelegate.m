@@ -65,7 +65,7 @@
 	// access the NSTextView
 	NSTextView *textView = [fragaria objectForKey:ro_MGSFOTextView];
     
-//    [self refresh];
+    [self refresh];
 
 	
 #pragma unused(textView)

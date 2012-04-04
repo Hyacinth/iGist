@@ -22,6 +22,7 @@
 		3E1C662A152CB1A20003C079 /* Prefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C6628152CB1A20003C079 /* Prefs.m */; };
 		3E1C662C152CB4360003C079 /* JSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1C662B152CB4360003C079 /* JSON.framework */; };
 		3E1C6630152CB6750003C079 /* JSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1C662B152CB4360003C079 /* JSON.framework */; };
+		3E1C663C152CD8750003C079 /* igisticon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E1C663B152CD8750003C079 /* igisticon.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -108,7 +109,7 @@
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* iGist_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; path = iGist_Prefix.pch; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* iGist_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iGist_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -130,7 +131,8 @@
 		3E1C6627152CB1A20003C079 /* Prefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefs.h; sourceTree = "<group>"; };
 		3E1C6628152CB1A20003C079 /* Prefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prefs.m; sourceTree = "<group>"; };
 		3E1C662B152CB4360003C079 /* JSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSON.framework; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* iGist-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; path = "iGist-Info.plist"; sourceTree = "<group>"; };
+		3E1C663B152CD8750003C079 /* igisticon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = igisticon.icns; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iGist-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iGist-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* iGist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3971C8118C1F8A00AEF388 /* MGSSyntaxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSSyntaxController.h; sourceTree = "<group>"; };
 		AB3971C9118C1F8A00AEF388 /* MGSSyntaxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSSyntaxController.m; sourceTree = "<group>"; };
@@ -160,7 +162,7 @@
 		AB648E3811FB38BD00AEF7BD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AB648E4211FB395100AEF7BD /* Fragaria_Document-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Fragaria_Document-Info.plist"; sourceTree = "<group>"; };
 		AB69B62B118B745700903D1D /* MGSiGist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGSiGist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB69B62C118B745700903D1D /* MGSiGist-Info.plist */ = {isa = PBXFileReference; path = "MGSiGist-Info.plist"; sourceTree = "<group>"; };
+		AB69B62C118B745700903D1D /* MGSiGist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MGSiGist-Info.plist"; sourceTree = "<group>"; };
 		AB69B65A118B75FB00903D1D /* SMLSyntaxColouring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SMLSyntaxColouring.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		AB69B662118B763A00903D1D /* SMLStandardHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLStandardHeader.h; sourceTree = "<group>"; };
 		AB69B664118B766300903D1D /* SMLSyntaxColouring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLSyntaxColouring.h; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E1C663B152CD8750003C079 /* igisticon.icns */,
 				3E1C6616152CAC7C0003C079 /* images */,
 				AB472C861299C34500202CB5 /* SMLDetab.xib */,
 				AB472C871299C34500202CB5 /* SMLEntab.xib */,
@@ -580,6 +583,7 @@
 				3E1C661A152CAC8B0003C079 /* toolbar_push.png in Resources */,
 				3E1C661C152CAC8F0003C079 /* toolbar_refresh.png in Resources */,
 				3E1C661E152CAC930003C079 /* toolbar_remove.png in Resources */,
+				3E1C663C152CD8750003C079 /* igisticon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
