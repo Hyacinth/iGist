@@ -1,15 +1,29 @@
-What is it?
-Fragaria is a Cocoa syntax colouring NSTextView.
+__iGist__ is personal snippets manager for github:gists. Made for Mac. ()
 
-Where did it come from?
-Fragaria is the vital pulp of Smultron (now Fraise).
+Current Features
+--------
+* Preference to change the username.
+* Syntax highlighting
+* Line numbering
+* Browse all your gists, or switch the user to view someone else.
+* Save a gist.
+* Copy a gist.
+* Open gist on github in web browser.
+* Refresh.
 
-Fragria is implemented as a framework that supports both reference counting and GC.
+Current Limitations
+--------
+* Only the first file in a gist is displayed.
+* Bad performance
+* Gists cannot be updated from __iGist__.
+* Gists cannot be deleted.
+* No error checking.
 
-Thanks to Rui Pacheco for the RC changes.
- 
-Other information regarding the original source may be availble:
-http://sourceforge.net/projects/smultron/files/smultron
-http://www.fraiseapp.com/
+Includes code from
+--------
+- Gister -> https://github.com/kgn/Gister (It started as a clone of gister)
+- Fragaria -> https://github.com/mugginsoft/Fragaria (https://github.com/mugginsoft/Fragaria)
 
- 
+Frameworks
+--------
+* [JSON](http://stig.github.com/json-framework/)
