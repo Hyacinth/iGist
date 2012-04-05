@@ -39,7 +39,7 @@
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item{
     Gist *gist = (Gist*)item;
-    NSString *title = [gist.files componentsJoinedByString:@", "];
+    NSString *title = [gist firstFileName];
     return title;
 }
 

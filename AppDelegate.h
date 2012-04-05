@@ -24,11 +24,8 @@
     NSArray *gists;
 }
 
-- (IBAction)copyToPasteBoard:(id)sender;
 - (void)refresh;
 - (void)setTextViewWithString:(NSString *) string;
-
-- (IBAction)showPreferences:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window, *preferencesWindow;
 @property (assign) IBOutlet NSOutlineView *listView;
@@ -43,10 +40,12 @@
 @end
 
 @interface AppDelegate(GistList)
+
 @end
 
 @interface AppDelegate(Actions)
-
+//- (IBAction)copyToPasteBoard:(id)sender;
+- (IBAction)showPreferences:(id)sender;
 - (IBAction)refreshAction:(id)sender;
 - (IBAction)openGithubAction:(id)sender;
 

@@ -19,18 +19,16 @@
 - (void)awakeFromNib{
     [[self.description cell] setBackgroundStyle:NSBackgroundStyleRaised];
     self.description.stringValue = @"";
-    
-    //don't wordwrap the text view
-//    [[[NSApp delegate] textView]setEditable:NO];
 }
 
 - (void)updateWithGist:(Gist *)aGist{
     self.gist = aGist;
-    NSString *rawString = [self.gist cachedTextForFile:[self.gist.files objectAtIndex:0]];
-    [[NSApp delegate] setTextViewWithString: rawString];      
+    NSString *rawString = [self.gist objectFromFirstFile:@"content"];
+
+    [[NSApp delegate] setTextViewWithString: rawString];   
+    [[NSApp delegate] setSyntaxDefinition: [self.gist objectFromFirstFile:@"language"]];       
     self.description.stringValue = self.gist.description;
     self.repo.stringValue = self.gist.repository;
-    //    http://gist.github.com/api/v1/json/
 }
 
 - (IBAction)copyFile:(id)sender{

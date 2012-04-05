@@ -17,14 +17,16 @@
     NSError *error;
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://gist.github.com/api/v1/json/gists/%@", user]];
     NSDictionary *data = (NSDictionary *)[[SBJsonParser alloc] objectWithString:[NSString initFromUrl:url] error:&error];
-    
+        
     NSMutableArray *gists = [[NSMutableArray alloc] init];
     NSAutoreleasePool *pool =  [[NSAutoreleasePool alloc] init];
     for(NSDictionary *gist in [data objectForKey:@"gists"]){
-        //TODO: fix the date
-        //Gist *testgist = [[Gist alloc] initWithDictionary:gist];
-        //NSLog(@"%@", testgist.created);
-        [gists addObject:[[Gist alloc] initWithDictionary:gist]];
+        
+        Gist *testgist = [[Gist alloc] initWithRepository:[gist objectForKey:@"repo"]];
+        NSLog(@"%@", testgist.created);
+
+        [gists addObject:[[Gist alloc] initWithRepository:[gist objectForKey:@"repo"]]];
+
         
     }
     [pool drain];

@@ -18,6 +18,10 @@
                                             nil];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsDictionary];
+    [git release];
 }
+
+
+
 
 @end

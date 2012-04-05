@@ -1,4 +1,4 @@
-__iGist__ is personal snippets manager for github:gists. Made for Mac. ()
+__iGist__ is personal snippets manager for github:gists. Made for Mac ().
 
 Current Features
 --------
@@ -22,8 +22,13 @@ Current Limitations
 Includes code from
 --------
 - Gister -> https://github.com/kgn/Gister (It started as a clone of gister)
-- Fragaria -> https://github.com/mugginsoft/Fragaria (https://github.com/mugginsoft/Fragaria)
+- Fragaria -> https://github.com/mugginsoft/Fragaria Frageria is used for syntax highlighting
 
 Frameworks
 --------
 * [JSON](http://stig.github.com/json-framework/)
+
+Short term todo
+--------
+* fix auto syntax highlighting
+* add new gist

@@ -114,27 +114,7 @@
 	 return YES;
  }
 
-- (IBAction)showPreferences:(id)sender{
-    [self.preferencesWindow makeKeyAndOrderFront:self];
-}
 
-#pragma mark -
-#pragma mark Pasteboard handling
-/*
- 
- copyToPasteBoard
- 
- */
-- (IBAction)copyToPasteBoard:(id)sender
-{
-	#pragma unused(sender)
-	
-	NSAttributedString *attString = [fragaria attributedString];
-	NSData *data = [attString RTFFromRange:NSMakeRange(0, [attString length]) documentAttributes:nil];
-	NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-	[pasteboard clearContents];
-	[pasteboard setData:data forType:NSRTFPboardType];
-}
 
 
 
